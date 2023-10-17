@@ -6,7 +6,15 @@
 <body>
   <h1>Multiple File Upload</h1>
   <form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="files" multiple>
+    <label for="photo">Photo:</label>
+    <input type="file" name="photo" accept="image/*" multiple required>
+
+    <label for="passport">Passport:</label>
+    <input type="file" name="passport" accept=".pdf, .doc, .docx" multiple required>
+
+    <label for="certificates">Certificates:</label>
+    <input type="file" name="certificates" accept=".pdf, .doc, .docx" multiple required>
+
     <button type="submit">Upload</button>
   </form>
 </body>
